@@ -14,30 +14,46 @@ header {
 }
 
 .header {
-  padding: 80px;
+  padding: 20px 80px 80px 80px;
 }
 
 .main {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 0px;
+  padding: 0px 75px 75px 75px;
 }
 
 .navi {
   color: #30261b;
-  padding: 20px 30px;
+  padding: 20px 40px;
   text-decoration: none;
+  letter-spacing: 5.5px;
 }
 
-.navi:hover:active {
+.navi:hover,
+.navi:active {
   color: #eabb54;
 }
 
 h1 {
   font-size: 85px;
+  margin-bottom: 25px;
 }
 
 a {
   text-decoration: none;
   color: #eabb54;
+}
+
+.subline {
+  font-size: 25px;
+  margin: 0px;
+  letter-spacing: 5.5px;
+}
+.subline::after {
+  content: "🧚🏾‍♀️";
+}
+
+*::selection {
+  background-color: #b1b984;
 }
