@@ -54,6 +54,38 @@ a {
   content: "🧚🏾‍♀️";
 }
 
+.subline:hover {
+  font-size: 26px;
+}
+
 *::selection {
   background-color: #b1b984;
+}
+
+.experience-heading {
+  display: inline-block;
+}
+
+.experience-sub {
+  display: inline-block;
+}
+
+.article-heading {
+  position: relative;
+  left: -25px;
+  text-transform: uppercase;
+}
+
+.hire-me {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  background: #eabb54;
+  color: white;
+}
+
+.hire-me:hover {
+  padding: 10px;
 }
