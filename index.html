@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style-cv.css" />
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -11,6 +10,7 @@
     <meta name="author" content="Ruth" />
     <meta name="description" content="This is my CV" />
     <title>Ruthys CV</title>
+    <link rel="stylesheet" href="style-cv.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/normalize.css@8.0.1/normalize.css"
@@ -18,15 +18,13 @@
   </head>
   <body>
     <header class="header">
-      <nav>
-        <ul>
-          <li><a href="#about" class="navi">About Me</a></li>
-          <li><a href="#experience" class="navi">Work Experience</a></li>
-          <li><a href="#skillset" class="navi">Skill Set</a></li>
-          <li><a href="#contact" class="navi">Contact</a></li>
-        </ul>
+      <nav class="nav">
+        <a href="#about" class="navi">About Me</a>
+        <a href="#experience" class="navi">Work Experience</a>
+        <a href="#skillset" class="navi">Skill Set</a>
+        <a href="#contact" class="navi">Contact</a>
       </nav>
-      <h1>Hi, I'm Ruthy Kaz.</h1>
+      <h1 class="main-heading">Hi, I'm Ruthy Kaz.</h1>
       <p class="subline">Graphic Design, Illustrations and soon Coding</p>
       <aside class="hire-me">Hire Me</aside>
     </header>
@@ -52,49 +50,63 @@
       </article>
       <article id="experience">
         <h2 class="article-heading">Work experience</h2>
-        <h3 class="experience-heading">Funke Mediengruppe - Westfunk</h3>
-        <p class="experience-sub">August 2020–Januar 2023</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-          autem necessitatibus. Modi magnam consectetur reiciendis a id aperiam
-          cupiditate totam eveniet excepturi! Expedita deserunt debitis
-          inventore perferendis totam excepturi cupiditate!
-        </p>
-        <h3 class="experience-heading">Cimaris</h3>
-        <p class="experience-sub">March 2023–November 2023</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-          autem necessitatibus. Modi magnam consectetur reiciendis a id aperiam
-          cupiditate totam eveniet excepturi! Expedita deserunt debitis
-          inventore perferendis totam excepturi cupiditate!
-        </p>
+        <section>
+          <header class="experience-header">
+            <h3 class="experience-heading">Funke Mediengruppe - Westfunk</h3>
+            <p class="experience-sub">August 2020–Januar 2023</p>
+          </header>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+            autem necessitatibus. Modi magnam consectetur reiciendis a id
+            aperiam cupiditate totam eveniet excepturi! Expedita deserunt
+            debitis inventore perferendis totam excepturi cupiditate!
+          </p>
+        </section>
+        <section>
+          <header class="experience-header">
+            <h3 class="experience-heading">Cimaris</h3>
+            <p class="experience-sub">March 2023–November 2023</p>
+          </header>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+            autem necessitatibus. Modi magnam consectetur reiciendis a id
+            aperiam cupiditate totam eveniet excepturi! Expedita deserunt
+            debitis inventore perferendis totam excepturi cupiditate!
+          </p>
+        </section>
       </article>
       <article id="skillset">
         <h2 class="article-heading">Skill Set</h2>
-      </article>
-      <article>
-        <h3>Soft Skills</h3>
-        <ul>
-          <li>
-            Demonstrates kindness and patience in collaborative environments
-          </li>
-          <li>Quick learner</li>
-          <li>Proactive and responsible approach to tasks</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Technical Skills</h3>
-        <ul>
-          <li>Proficient in Illustrator, leveraging design expertise</li>
-          <li>Skilled in Procreate for digital illustration</li>
-          <li>Competent in InDesign for layout and print design</li>
-          <li>Proficient in XD, ensuring seamless user experience design</li>
-        </ul>
+        <section>
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>
+              Demonstrates kindness and patience in collaborative environments
+            </li>
+            <li>Quick learner</li>
+            <li>Proactive and responsible approach to tasks</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Proficient in Illustrator, leveraging design expertise</li>
+            <li>Skilled in Procreate for digital illustration</li>
+            <li>Competent in InDesign for layout and print design</li>
+            <li>Proficient in XD, ensuring seamless user experience design</li>
+          </ul>
+        </section>
       </article>
       <article id="contact">
         <h2 class="article-heading">Let's stay in touch!</h2>
         <a href="mailto:ruth.kazembola@gmail.com">Send an Email</a>
       </article>
     </main>
+    <footer class="footer">
+      <p class="footer-text">
+        Did you like my CV?
+        <a class="footer-link" href="mailto:abc">Contact me</a>
+      </p>
+    </footer>
   </body>
 </html>

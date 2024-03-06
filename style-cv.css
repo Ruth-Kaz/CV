@@ -5,36 +5,51 @@ body {
   margin: 0rem;
 }
 
-header {
+.header {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  background-color: #f7edcd;
+  background-image: linear-gradient(180deg, #eabb54, #fdf9e7);
   margin-bottom: 5rem;
   color: #30261b;
-  padding: 1.25rem 5rem 5rem 5rem;
+  padding: 3rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .experience-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
 
 .main {
   max-width: 60ch;
-  margin: 0rem;
-  padding: 0rem 4.688rem 4.688rem 4.688rem;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .navi {
   color: #30261b;
-  padding: 1.25rem 2.5rem;
+  padding: 1.5rem 1.25rem;
   text-decoration: none;
   letter-spacing: 0.344rem;
 }
 
 .navi:hover,
 .navi:active {
-  color: #eabb54;
-}
-
-h1 {
-  font-size: 5.313rem;
-  margin-bottom: 1.563em;
+  color: whitesmoke;
 }
 
 a {
@@ -79,8 +94,8 @@ a {
   top: 1rem;
   padding: 0.5rem;
   border-radius: 0.313rem;
-  background: #eabb54;
-  color: white;
+  background: whitesmoke;
+  color: #eabb54;
 }
 
 .hire-me:hover {
@@ -94,12 +109,17 @@ a {
 }
 
 .main > * {
-  border-top: 0.125rem solid grey;
-  padding: 0 1rem;
+  border-top: 0.125rem solid #eabb54;
+  padding: 2rem 1rem 0rem 1rem;
 }
 
 .main > *:first-child {
   border-top: none;
+}
+
+.main-heading {
+  font-size: 5rem;
+  margin: 5rem 0rem 1rem;
 }
 
 .article-heading {
@@ -113,4 +133,20 @@ a {
 
 .experience-subheading {
   display: inline-block;
+}
+
+.footer {
+  margin-top: 3rem;
+  background-color: #eabb54;
+  padding: 2rem;
+}
+
+.footer-text {
+  text-align: center;
+  margin: 0;
+  color: #30261b;
+}
+
+.footer-link {
+  color: whitesmoke;
 }
