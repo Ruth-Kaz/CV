@@ -1,16 +1,38 @@
 html {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
 body {
-  margin: 0rem;
+  --background-color: whitesmoke;
+  --text-color: #30261b;
+  --accent-color: #eabb54;
+  --accent-color2: #fdf9e7;
+  --accent-color3: #b1b984;
+  --accent-text-color: #eabb54;
+  --nav-link-active-bg-color: whitesmoke;
+
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    --page-background-color: black;
+    --page-text-color: white;
+  }
 }
 
 .header {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  background-image: linear-gradient(180deg, #eabb54, #fdf9e7);
+  background-image: linear-gradient(
+    180deg,
+    var(--accent-color),
+    var(--accent-color2)
+  );
   margin-bottom: 5rem;
-  color: #30261b;
+  color: var(--accent-text-color);
   padding: 3rem 1rem;
 }
 
@@ -26,11 +48,6 @@ body {
   }
 }
 
-.main {
-  max-width: 60ch;
-  margin: 0 auto;
-  padding: 1rem;
-}
 .nav {
   display: flex;
   flex-direction: column;
@@ -45,15 +62,24 @@ body {
 }
 
 .navi {
-  color: #30261b;
+  color: var(--text-color);
   padding: 0.75rem 0.5rem;
   text-decoration: none;
   letter-spacing: 0.344rem;
+  transition: color 0.28s ease-in;
 }
 
 .navi:hover,
 .navi:active {
-  color: whitesmoke;
+  color: var(--background-color);
+}
+
+.navi:focus {
+  color: var(--accent-color);
+  background-color: var(--nav-link-active-bg-color);
+  opacity: 0.6;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.313rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -64,13 +90,14 @@ body {
 
 a {
   text-decoration: none;
-  color: #eabb54;
+  color: var(--accent-text-color);
 }
 
 .subline {
   font-size: 1.563rem;
   margin: 0rem;
   letter-spacing: 0.344rem;
+  color: var(--text-color);
 }
 .subline::after {
   content: "🧚🏾‍♀️";
@@ -81,7 +108,8 @@ a {
 }
 
 *::selection {
-  background-color: #b1b984;
+  color: var(--accent-color2);
+  background-color: var(--accent-color3);
 }
 
 .article-heading {
@@ -96,12 +124,12 @@ a {
   top: 1rem;
   padding: 0.5rem;
   border-radius: 0.313rem;
-  background: whitesmoke;
-  color: #eabb54;
+  background: var(--background-color);
+  color: var(--accent-text-color);
 }
 
 .hire-me:hover {
-  padding: 0.625rem;
+  transform: scale(1.2);
 }
 
 @media screen and (min-width: 992px) {
@@ -109,16 +137,30 @@ a {
     position: fixed;
   }
 }
+.main {
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
 
 @media screen and (min-width: 768px) {
-  .main > * + * {
-    margin-top: 5rem;
+  .main {
+    max-width: 80ch;
   }
 }
 
-.main > * {
-  border-top: 0.125rem solid #eabb54;
-  padding: 2rem 1rem 0rem 1rem;
+.main > * + * {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main > * + * {
+    margin-top: 8rem;
+  }
+
+  .main > *:first-child {
+    margin-top: 4rem;
+  }
 }
 
 .main > *:first-child {
@@ -128,6 +170,24 @@ a {
 .main-heading {
   font-size: 5rem;
   margin: 5rem 0rem 1rem;
+}
+
+.main-article {
+  border-top: 0.125rem solid var(--accent-color);
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-article-content {
+    margin: 3rem auto auto auto;
+  }
 }
 
 .article-heading {
@@ -157,16 +217,16 @@ a {
 
 .footer {
   margin-top: 3rem;
-  background-color: #eabb54;
+  background-color: var(--accent-color);
   padding: 2rem;
 }
 
 .footer-text {
   text-align: center;
   margin: 0;
-  color: #30261b;
+  color: var(--text-color);
 }
 
 .footer-link {
-  color: whitesmoke;
+  color: var(--background-color);
 }
